@@ -23,7 +23,13 @@ namespace CreateListMIcroSIP {
                         if (line[8] == "default_address") continue;
                         if (line[11] == "display-name") continue;
 
-                        contactsMicroSIP.Add(new ContactMicroSIP(line[6].Trim().Replace("\"", "") + " || " + line[11].Trim().Replace("\"", ""), $"{line[8].Substring(5, 3)}"));
+                        contactsMicroSIP.Add(
+                            new ContactMicroSIP(
+                                line[6].Trim().Replace("\"", "") 
+                                + " || " 
+                                + line[11].Trim().Replace("\"", ""), 
+                                $"{line[8].Substring(5, 3)}")
+                            );
                     }
                 }
 
