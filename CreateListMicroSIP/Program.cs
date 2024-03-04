@@ -25,10 +25,11 @@ namespace CreateListMIcroSIP {
 
                         contactsMicroSIP.Add(
                             new ContactMicroSIP(
-                                line[6].Trim().Replace("\"", "") 
-                                + " || " 
-                                + line[11].Trim().Replace("\"", ""), 
-                                $"{line[8].Substring(5, 3)}")
+                                line[6].Trim().Replace("\"", "")
+                                + " || "
+                                + line[11].Trim().Replace("\"", ""),
+                                $"{line[8].Substring(5, 3)}"
+                                )
                             );
                     }
                 }
@@ -41,9 +42,10 @@ namespace CreateListMIcroSIP {
                     }
                 }
 
-            } catch(IOException error) {
+            }
+            catch (IOException error) {
                 Console.WriteLine(error.ToString());
-            }  
+            }
         }
     }
 }
